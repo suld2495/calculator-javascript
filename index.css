@@ -1,0 +1,108 @@
+html, body {
+    height: 100%;
+}
+
+:root {
+    background-color: rgb(226, 255, 255);
+    --light-color: rgb(47, 218, 218);
+    --dark-color: rgb(41, 112, 112);
+    --title-font-size: 14px;
+    --input-background-color: rgb(235, 235, 235);
+    --input-font-size: 20px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
+}
+
+main {
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #fff;    
+    max-width: 700px;
+}
+
+main form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    
+}
+
+.calculator h2 {
+    font-size: var(--title-font-size);
+    margin-bottom: 10px;
+}
+
+.calculator .input {
+    background-color: var(--input-background-color);
+    display: flex;
+    border-radius: 5px;
+}
+
+.calculator input {
+    appearance: none;
+    border: none;
+    
+    padding: 5px;
+    font-size: var(--input-font-size);
+    text-align: right;
+    background-color: transparent;
+    width: 100%;
+}
+
+.calculator .tips > div {
+    display: grid;
+    grid-template: 1fr 1fr/1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.calculator .tips button {
+    border-radius: 5px;
+	appearance: none;
+	border: none;
+	background-color: var(--dark-color);
+    color: #fff;
+}
+
+.calculator .tips button.selected {
+    background-color: var(--light-color);
+}
+
+.result {
+    background-color: var(--dark-color);
+    border-radius: 15px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.result > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.result > div > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.result .label {
+    display: flex;
+    flex-direction: column;
+}
